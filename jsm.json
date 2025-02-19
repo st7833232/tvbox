@@ -52,7 +52,7 @@
 {"key":"文采","name":"文采| 秒播","type":3,"api":"csp_Jpys","searchable":1,"quickSearch":1,"changeable":1},
 {"key":"热播","name":"热播| 多线","type":3,"api":"csp_AppTT","searchable":1,"quickSearch":1,"changeable":1,"ext":"AO7TcBkd8I/B5wQc4Qma+pU="},
 {"key":"萌米","name":"萌米| 多线","type":3,"api":"csp_AppTT","searchable":1,"quickSearch":0,"changeable":1,"ext":"AO7TcBkd8Iifux0Y8Qze6tVlMg=="},
-{"key":"可可","name":"可可| 多线","type":3,"api":"csp_Kekys","searchable":1,"quickSearch":1,"changeable":1},
+{"key":"可可","name":"可可| 多线","type":3,"api":"csp_Kekys","searchable":1,"quickSearch":1,"changeable":1,,"ext":"./json/新可可影視-直連.json"},
 {"key":"Auete","name":"奥特| 无广","type": 3,"api":"csp_Auete","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"https://auete.com/"}, 
 {"key":"新6V","name":"新6V| 磁力","type":3,"api":"csp_SixV","searchable":1,"quickSearch":1,"changeable":0,"ext": "https://www.xb6v.com/"},
 // {"key":"凯奇影视","name":"30. 影視| 凯奇","type":3,"api":"csp_XBPQ","jar":"./jar/xyqxbpq.jar","searchable":1,"quickSearch":1,"filterable":1,"ext":"./json/凱奇影視.json"},
