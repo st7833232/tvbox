@@ -30,7 +30,7 @@
 {"key":"厂长","name":"📔厂长┃不卡","type":3,"api":"csp_NewCzGuard","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"海纳TV","name":"影視| 海纳","type":3,"api":"csp_XBPQ","jar":"./jar/xyqxbpq.jar","searchable":1,"quickSearch":1,"filterable":1,"ext":"./json/海纳TV.json"},
 {"key":"溢彩","name":"💡溢彩┃秒播","type":3,"api":"csp_AppSxGuard","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"rfOb1uAWbkRHp7hdxprG9un3+TfN183v1zIyaYDoDAIaLw5L8Dp8+v88LrEL3dBzrmWbdMBX0WNm7HtkQuw0AIzUurGBVyPqCKzDmbriATuukhctJlsLo8KxCw=="},
-{"key":"sgolys","name": "影視| 欧乐(T4)","type": 4,"api": "https://tang.hz.cz/power/olelive?token=b1eb6417","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0 }, 
+//{"key":"sgolys","name": "影視| 欧乐(T4)","type": 4,"api": "https://tang.hz.cz/power/olelive?token=b1eb6417","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0 }, 
 {"key": "py_OleVod","name": "欧乐影院(T4)","type": 4,"api": "https://py.doube.eu.org/spider?site=OleVod","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 1},
 {"key":"原创","name":"☀原创┃不卡","type":3,"api":"csp_YCyzGuard","timeout":30,"playerType":1,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"比特","name":"🍄比特┃手机","type":3,"api":"csp_BttwooGuard","timeout":15,"searchable":1,"quickSearch":1,"changeable":1},
