@@ -11,6 +11,21 @@ import re
 sys.path.append('..')
 from base.spider import Spider
 
+def getTimeToken():
+        res = requests.get(https://www.keke7.app)
+
+        soup = BeautifulSoup(res.content, 'html.parser')
+        div_list = soup.find_all('input')
+
+        strToken = ''
+
+        for each in div_list:
+            if ('t' == each.get('name')):
+                print(each.get('value'))
+                strToken = each.get('value')
+                break
+                
+        return strToken
 
 class Spider(Spider):
     def getName(self):
@@ -34,22 +49,6 @@ class Spider(Spider):
 
     def manualVideoCheck(self):
         pass
-        
-    def getTimeToken(self):
-        res = requests.get(self.home_url)
-
-        soup = BeautifulSoup(res.content, 'html.parser')
-        div_list = soup.find_all('input')
-
-        strToken = ''
-
-        for each in div_list:
-            if ('t' == each.get('name')):
-                print(each.get('value'))
-                strToken = each.get('value')
-                break
-                
-        return strToken
 
     def homeContent(self, filter):
         result = {
@@ -431,7 +430,7 @@ class Spider(Spider):
             return {'list': [], 'msg': str(e)}
 
     def searchContent(self, key, quick, page='1'):
-        url = f'{self.home_url}/search?k={key}&t=' + getTimeToken(self)
+        url = f'{self.home_url}/search?k={key}&t=' + getTimeToken()
         d = []
         try:
             res = requests.get(url, headers=self.headers)
