@@ -5,27 +5,10 @@
 
 import sys
 import requests
-from bs4 import BeautifulSoup
 from lxml import etree
 import re
 sys.path.append('..')
 from base.spider import Spider
-
-def getTimeToken():
-    res = requests.get('https://www.keke7.app/')
-    
-    soup = BeautifulSoup(res.content, 'html.parser')
-    div_list = soup.find_all('input')
-    
-    strToken = ''
-    
-    for each in div_list:
-        if ('t' == each.get('name')):
-            print(each.get('value'))
-            strToken = each.get('value')
-            break
-
-    return strToken
 
 class Spider(Spider):
     def getName(self):
@@ -430,7 +413,7 @@ class Spider(Spider):
             return {'list': [], 'msg': str(e)}
 
     def searchContent(self, key, quick, page='1'):
-        url = f'{self.home_url}/search?k={key}&t=lEY2A0gwt5b+lF0rOVmvGg=='
+        url = f'{self.home_url}/search?k={key}&page={page}&os=pc'
         d = []
         try:
             res = requests.get(url, headers=self.headers)
