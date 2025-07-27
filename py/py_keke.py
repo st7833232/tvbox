@@ -12,20 +12,20 @@ sys.path.append('..')
 from base.spider import Spider
 
 def getTimeToken():
-        res = requests.get('https://www.keke7.app/')
+    res = requests.get('https://www.keke7.app/')
+    
+    soup = BeautifulSoup(res.content, 'html.parser')
+    div_list = soup.find_all('input')
+    
+    strToken = ''
+    
+    for each in div_list:
+        if ('t' == each.get('name')):
+            print(each.get('value'))
+            strToken = each.get('value')
+            break
 
-        soup = BeautifulSoup(res.content, 'html.parser')
-        div_list = soup.find_all('input')
-
-        strToken = ''
-
-        for each in div_list:
-            if ('t' == each.get('name')):
-                print(each.get('value'))
-                strToken = each.get('value')
-                break
-                
-        return strToken
+    return strToken
 
 class Spider(Spider):
     def getName(self):
