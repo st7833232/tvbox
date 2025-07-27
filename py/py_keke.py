@@ -12,7 +12,7 @@ sys.path.append('..')
 from base.spider import Spider
 
 def getTimeToken():
-        res = requests.get(https://www.keke7.app)
+        res = requests.get('https://www.keke7.app/')
 
         soup = BeautifulSoup(res.content, 'html.parser')
         div_list = soup.find_all('input')
