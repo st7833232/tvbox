@@ -430,7 +430,7 @@ class Spider(Spider):
             return {'list': [], 'msg': str(e)}
 
     def searchContent(self, key, quick, page='1'):
-        url = f'{self.home_url}/search?k={key}&t=' + getTimeToken()
+        url = f'{self.home_url}/search?k={key}&t=' + 'lEY2A0gwt5b+lF0rOVmvGg=='
         d = []
         try:
             res = requests.get(url, headers=self.headers)
