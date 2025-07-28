@@ -5,6 +5,7 @@
 
 import sys
 import requests
+from bs4 import BeautifulSoup
 from lxml import etree
 import re
 sys.path.append('..')
@@ -32,6 +33,15 @@ class Spider(Spider):
 
     def manualVideoCheck(self):
         pass
+
+    def getTimeToken(self):
+        res = requests.get(self.home_url)
+        soup = BeautifulSoup(res.content, 'html.parser')
+        div_list = soup.find_all('input')
+        for each in div_list:
+            if ('t' == each.get('name')):
+                return each.get('value')
+        return ''
 
     def homeContent(self, filter):
         result = {
@@ -413,7 +423,8 @@ class Spider(Spider):
             return {'list': [], 'msg': str(e)}
 
     def searchContent(self, key, quick, page='1'):
-        url = f'{self.home_url}/search?k={key}&page={page}&os=pc'
+        token = self.getTimeToken()
+        url = f'{self.home_url}/search?k={key}&t={token}'
         d = []
         try:
             res = requests.get(url, headers=self.headers)
