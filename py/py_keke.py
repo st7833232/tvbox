@@ -40,7 +40,7 @@ class Spider(Spider):
         div_list = soup.find_all('input')
         for each in div_list:
             if ('t' == each.get('name')):
-                return each.get('value')
+                return re.sub(r'==$', '%3D%3D', each.get('value'))
         return ''
 
     def homeContent(self, filter):
