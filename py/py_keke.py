@@ -84,7 +84,7 @@ class Spider(Spider):
                         {'n': '韩国', 'v': '韩国'},
                         {'n': '英国', 'v': '英国'},
                         {'n': '法国', 'v': '法国'}]},
-                    {'name': '语言', 'key': 'language', 'value': [  # 新增語言篩選
+                    {'name': '语言', 'key': 'lang', 'value': [  # 新增語言篩選
                         {'n': '全部', 'v': ''},
                         {'n': '国语', 'v': '国语'},
                         {'n': '英语', 'v': '英语'},
@@ -148,7 +148,7 @@ class Spider(Spider):
                         {'n': '韩国', 'v': '韩国'},
                         {'n': '英国', 'v': '英国'},
                         {'n': '法国', 'v': '法国'}]},
-                    {'name': '语言', 'key': 'language', 'value': [
+                    {'name': '语言', 'key': 'lang', 'value': [
                         {'n': '全部', 'v': ''},
                         {'n': '国语', 'v': '国语'},
                         {'n': '英语', 'v': '英语'},
@@ -215,7 +215,7 @@ class Spider(Spider):
                         {'n': '韩国', 'v': '韩国'},
                         {'n': '英国', 'v': '英国'},
                         {'n': '法国', 'v': '法国'}]},
-                    {'name': '语言', 'key': 'language', 'value': [
+                    {'name': '语言', 'key': 'lang', 'value': [
                         {'n': '全部', 'v': ''},
                         {'n': '国语', 'v': '国语'},
                         {'n': '英语', 'v': '英语'},
@@ -271,7 +271,7 @@ class Spider(Spider):
                         {'n': '韩国', 'v': '韩国'},
                         {'n': '英国', 'v': '英国'},
                         {'n': '法国', 'v': '法国'}]},
-                    {'name': '语言', 'key': 'language', 'value': [
+                    {'name': '语言', 'key': 'lang', 'value': [
                         {'n': '全部', 'v': ''},
                         {'n': '国语', 'v': '国语'},
                         {'n': '英语', 'v': '英语'},
@@ -356,7 +356,7 @@ class Spider(Spider):
         # 地区
         _area = ext.get('area', '')
         # 语言
-        _language = ext.get('language', '')
+        _language = ext.get('lang', '')
         # 年份
         _year = ext.get('year', '')
         # 排序
