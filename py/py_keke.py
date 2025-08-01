@@ -362,7 +362,7 @@ class Spider(Spider):
         # 排序
         _by = ext.get('by', '')
 
-        url = self.home_url + f'/show/{cid}-{_class}-{_area}--{_year}-{_by}-{page}.html'
+        url = self.home_url + f'/show/{cid}-{_class}-{_area}--{_year}-{_language}-{_by}-{page}.html'
         d = []
         try:
             res = requests.get(url, headers=self.headers)
