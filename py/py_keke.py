@@ -406,7 +406,7 @@ class Spider(Spider):
             video_list.append({
                 'type_name': '',
                 'vod_id': ids,
-                'vod_name': i.xpath('.//div[@class="title"]/text()')[0],
+                'vod_name': i.xpath('.//div[@class="title"]/text()')[1],
                 'vod_remarks': '',
                 'vod_year': '',
                 'vod_area': '',
