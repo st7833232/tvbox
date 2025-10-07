@@ -509,6 +509,14 @@
   "mc.usihnbcq.cn",
   "hd.youyhn.com"
 ],
+"flags": [
+  "youku",    "优酷",       "优 酷",      "优酷视频",     "qq",       "腾讯",
+  "腾 讯",      "腾讯视频",     "iqiyi",    "qiyi",     "奇艺",       "爱奇艺",
+  "爱 奇 艺",    "m1905",    "xigua",    "letv",     "leshi",    "乐视",
+  "乐 视",      "sohu",     "搜狐",       "搜 狐",      "搜狐视频",     "tudou",
+  "pptv",     "mgtv",     "芒果",       "imgo",     "芒果TV",     "芒 果 T V",
+  "bilibili", "哔 哩",      "哔 哩 哔 哩"
+],
 "lives": [ 
   {
     "name": "🏠RobYang| http://RobYang.ggff.net",
@@ -562,3 +570,4 @@
 {"name":"ipv6","type":0,"url":"https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/tvboxtv.txt","ua":"okhttp/3.8.1","timeout":20,"epg":"https://epg.112114.eu.org/?ch={name}&date={date}&serverTimeZone=Asia/Hong_Kong","logo":"https://epg.112114.eu.org/logo/{name}.png"}
 ]
 }
+
