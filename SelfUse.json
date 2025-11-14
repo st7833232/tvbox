@@ -17,7 +17,7 @@
 {"key":"苹果","name":"🍎苹果┃不卡","type":3,"api":"csp_LiteAppleGuard","timeout":15,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"文采","name":"💮文采┃秒播","type":3,"api":"csp_JpysGuard","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key": "鲸鱼","name": "🏆｜鲸鱼｜藍光◎秒播(無廣告)","quickSearch": 0,"searchable": 1,"type": 3,"api": "https://gitlab.com/st7833232/recha/-/raw/main/py/getapp3.4.2.py","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/mi-0815.png;","ext": {"host": "https://jingyu4k-1312635929.cos.ap-nanjing.myqcloud.com/1.json","url": "http://103.217.207.75:1122","dataKey": "AAdgrdghjfgswerA","datakey": "AAdgrdghjfgswerA","api": 2}},
-{"key":"可可","name":"☕️可可","type":3,"api":"csp_XYQHiker","jar":"https://jihulab.com/yoursmile6/TVBox/-/raw/main/Yoursmile.jar","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://raw.githubusercontent.com/st7833232/tvbox/refs/heads/own/json/可可影视.json"},
+{"key":"可可","name":"☕️可可","type":3,"api":"csp_XYQHiker","jar":"https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/Yoursmile.jar","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://raw.githubusercontent.com/st7833232/tvbox/refs/heads/own/json/可可影视.json"},
 {"key": "csp_可可","name": "🥇｜可可｜高清◎秒播(無廣告)","type": 3,"api": "https://raw.githubusercontent.com/st7833232/tvbox/refs/heads/own/py/py_keke.py","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xiaosa-1107.jar?ref_type=heads","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "py_aidianying","name": "🏆｜愛電影｜藍光◎秒播(無廣告)","type": 3,"api": "https://gitlab.com/st7833232/recha/-/raw/main/py/aidianying.py","searchable": 1,"filterable": 0,"changeable": 0},
 {"key": "火锅","name": "📱｜火鍋｜高清◎秒播(無廣告+APP)","type": 3,"api": "csp_AppGet","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xiaosa-1107.jar?ref_type=heads","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": {"url": "https://ios.hgyx.vip","site": "","dataKey": "062dec75d039980e","dataIv": "062dec75d039980e","deviceId": "","version": ""}},
@@ -541,6 +541,7 @@
 {"name":"ipv6","type":0,"url":"https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/tvboxtv.txt","ua":"okhttp/3.8.1","timeout":20,"epg":"https://epg.112114.eu.org/?ch={name}&date={date}&serverTimeZone=Asia/Hong_Kong","logo":"https://epg.112114.eu.org/logo/{name}.png"}
 ]
 }
+
 
 
 
