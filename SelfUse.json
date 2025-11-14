@@ -18,8 +18,8 @@
 {"key":"文采","name":"💮文采┃秒播","type":3,"api":"csp_JpysGuard","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"鲸鱼","name":"👀鲸鱼┃秒播","type":3,"api":"csp_AppSxGuard","searchable":1,"quickSearch":1,"filterable":1,"ext":"rfOX1voDIQhH8epBwpmIsuS/sSCZz8r+wzZkfJbkFR5FJ1EK9mVu7apib64Gl8ND6FCETepkkEhht0ptIq9qCQ=="},
 {"key":"可可","name":"☕️可可","type":3,"api":"csp_XYQHiker","jar":"https://jihulab.com/yoursmile6/TVBox/-/raw/main/Yoursmile.jar","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://raw.githubusercontent.com/st7833232/tvbox/refs/heads/own/json/可可影视.json"},
-{"key": "csp_可可","name": "🥇｜可可｜高清◎秒播(無廣告)","type": 3,"api": "https://raw.githubusercontent.com/st7833232/tvbox/refs/heads/own/py/py_keke.py","searchable": 1,"quickSearch": 1,"filterable": 1},
-{"key": "火锅","name": "📱｜火鍋｜高清◎秒播(無廣告+APP)","type": 3,"api": "csp_AppGet","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xiaosa-1015.jar?ref_type=heads","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": {"url": "https://ios.hgyx.vip","site": "","dataKey": "062dec75d039980e","dataIv": "062dec75d039980e","deviceId": "","version": ""}},
+{"key": "csp_可可","name": "🥇｜可可｜高清◎秒播(無廣告)","type": 3,"api": "https://raw.githubusercontent.com/st7833232/tvbox/refs/heads/own/py/py_keke.py","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xiaosa-1107.jar?ref_type=heads","searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "火锅","name": "📱｜火鍋｜高清◎秒播(無廣告+APP)","type": 3,"api": "csp_AppGet","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xiaosa-1107.jar?ref_type=heads","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": {"url": "https://ios.hgyx.vip","site": "","dataKey": "062dec75d039980e","dataIv": "062dec75d039980e","deviceId": "","version": ""}},
 {"key":"红豆","name":"🍊红豆┃多线","type":3,"api":"csp_AppSxGuard","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"rfOX1voDIQhH8epBwpmIsuS/sSCZ0NTh0TYsL4PsF1wEM1kc4mV87b9fc/FN//x7jUuaRvFX81tz8A=="},
 {"key":"下饭","name":"🍙下饭┃多线","type":3,"api":"csp_AppSxGuard","searchable":1,"quickSearch":1,"filterable":1,"ext":"rfOX1voDIQhH8epBwpmIsuStuSyZxtH332ksdImjS1xHcE9fpWVy8fNjc+8DhNI67j3SJZRGjnM="},
 {"key":"兄弟","name":"🍊水星┃多线","type":3,"api":"csp_AppSxGuard","timeout":15,"searchable":1,"quickSearch":1,"filterable":1,"ext":"rfOb1uAWbkRHp7hdxprG9un3+SLP183q3ik3cJDiAwlFdF8L6SIvrvc9LrpTyIg76T7QJZdEkWNj43wiSaA0TJyQpu2IF2jsSLWFx7WkAmG40hFxJ1tI+Jf+EVG8DtoDRcNi+TtVGULnWrSz3EWnVcxR3EJhXnrwYWe1kJtNW5txuHAO"},
@@ -540,6 +540,7 @@
 {"name":"ipv6","type":0,"url":"https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/tvboxtv.txt","ua":"okhttp/3.8.1","timeout":20,"epg":"https://epg.112114.eu.org/?ch={name}&date={date}&serverTimeZone=Asia/Hong_Kong","logo":"https://epg.112114.eu.org/logo/{name}.png"}
 ]
 }
+
 
 
 
