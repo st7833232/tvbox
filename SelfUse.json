@@ -16,11 +16,11 @@
 {"key":"剧迷TV","name":"影視| 剧迷TV","type":3,"api":"csp_XBPQ","jar":"./jar/XBPQ.jar","searchable":1,"quickSearch":1,"filterable":1,"ext":{"影片年代":"<div class=\"module-info-tag\">&&</div>","影片状态":"备注：&&</div>","影片类型":"module-info-tag\">&&立即播放","线路数组":"data-dropdown-value=&&</div>","线路标题":"<span>&&</small>[替换:</span><small>>>共]+集","分类url":"https://www.jagcys.com/vodshow/dianying/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html","分类":"电影$dianying#电视剧$dsj#动漫$dongman#综艺$zongyi#体育赛事$tiyusaishi"}},
 {"key":"苹果","name":"🍎苹果┃不卡","type":3,"api":"csp_LiteAppleGuard","timeout":15,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"文采","name":"💮文采┃秒播","type":3,"api":"csp_JpysGuard","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
-{"key": "鲸鱼","name": "🏆｜鲸鱼｜藍光◎秒播(無廣告)","quickSearch": 0,"searchable": 1,"type": 3,"api": "https://gitlab.com/st7833232/recha/-/raw/main/py/getapp3.4.2.py","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/mi-0815.png;","ext": {"host": "https://jingyu4k-1312635929.cos.ap-nanjing.myqcloud.com/1.json","url": "http://103.217.207.75:1122","dataKey": "AAdgrdghjfgswerA","datakey": "AAdgrdghjfgswerA","api": 2}},
+{"key": "鲸鱼","name": "🏆｜鲸鱼｜藍光◎秒播(無廣告)","quickSearch": 1,"searchable": 1,"type": 3,"api": "https://gitlab.com/st7833232/recha/-/raw/main/py/getapp3.4.2.py","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/mi-0815.png;","ext": {"host": "https://jingyu4k-1312635929.cos.ap-nanjing.myqcloud.com/1.json","url": "http://103.217.207.75:1122","dataKey": "AAdgrdghjfgswerA","datakey": "AAdgrdghjfgswerA","api": 2}},
 {"key":"可可","name":"☕️可可","type":3,"api":"csp_XYQHiker","jar":"https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/Yoursmile.jar","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://raw.githubusercontent.com/st7833232/tvbox/refs/heads/own/json/可可影视.json"},
 {"key": "csp_可可","name": "🥇｜可可｜高清◎秒播(無廣告)","type": 3,"api": "https://raw.githubusercontent.com/st7833232/tvbox/refs/heads/own/py/py_keke.py","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xiaosa-1107.jar?ref_type=heads","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "py_aidianying","name": "🏆｜愛電影｜藍光◎秒播(無廣告)","type": 3,"api": "https://gitlab.com/st7833232/recha/-/raw/main/py/aidianying.py","searchable": 1,"filterable": 0,"changeable": 0},
-{"key": "火锅","name": "📱｜火鍋｜高清◎秒播(無廣告+APP)","type": 3,"api": "csp_AppGet","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xiaosa-1107.jar?ref_type=heads","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": {"url": "https://ios.hgyx.vip","site": "","dataKey": "062dec75d039980e","dataIv": "062dec75d039980e","deviceId": "","version": ""}},
+{"key": "火锅","name": "火锅｜APP","type": 3,"quickSearch": 1,"api": "csp_AppGet","ext": {"url": "https://ios.hgyx.vip","dataKey": "062dec75d039980e","dataIv": "062dec75d039980e"}},
 {"key":"红豆","name":"🍊红豆┃多线","type":3,"api":"csp_AppSxGuard","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"rfOX1voDIQhH8epBwpmIsuS/sSCZ0NTh0TYsL4PsF1wEM1kc4mV87b9fc/FN//x7jUuaRvFX81tz8A=="},
 {"key":"下饭","name":"🍙下饭┃多线","type":3,"api":"csp_AppSxGuard","searchable":1,"quickSearch":1,"filterable":1,"ext":"rfOX1voDIQhH8epBwpmIsuStuSyZxtH332ksdImjS1xHcE9fpWVy8fNjc+8DhNI67j3SJZRGjnM="},
 {"key":"兄弟","name":"🍊水星┃多线","type":3,"api":"csp_AppSxGuard","timeout":15,"searchable":1,"quickSearch":1,"filterable":1,"ext":"rfOb1uAWbkRHp7hdxprG9un3+SLP183q3ik3cJDiAwlFdF8L6SIvrvc9LrpTyIg76T7QJZdEkWNj43wiSaA0TJyQpu2IF2jsSLWFx7WkAmG40hFxJ1tI+Jf+EVG8DtoDRcNi+TtVGULnWrSz3EWnVcxR3EJhXnrwYWe1kJtNW5txuHAO"},
@@ -541,6 +541,7 @@
 {"name":"ipv6","type":0,"url":"https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/tvboxtv.txt","ua":"okhttp/3.8.1","timeout":20,"epg":"https://epg.112114.eu.org/?ch={name}&date={date}&serverTimeZone=Asia/Hong_Kong","logo":"https://epg.112114.eu.org/logo/{name}.png"}
 ]
 }
+
 
 
 
