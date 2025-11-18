@@ -18,7 +18,7 @@ class Spider(Spider):
     def init(self, extend):
         self.home_url = 'https://www.keke7.app'
         self.headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246",
             "Referer": "https://www.keke7.app/",
         }
         self.image_domain = "https://vres.cfaqcgj.com"  # 圖片域名
