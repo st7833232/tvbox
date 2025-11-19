@@ -22,10 +22,9 @@
 {"key": "大白鯊","name": "🥇｜白鯊｜高清◎秒播(沒廣告)","type": 3,"api": "csp_XBPQ","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xyqxbpq.jar","ext": {"主页url": "https://dabaisha.tv/","分类url": "https://dabaisha.tv/{cateId}/explore/page-{catePg}-area-{area}-by-{by}-year-{year}.html","分类": "电影$movie#剧集$tv#综艺$variety#动漫$cartoon$#纪录片$doco$#短片$mini-drama","地区": "中国大陆&中国香港&中国台湾&华语&韩国&日本&美国&欧美&英国&法国&德国&意大利&西班牙&印度","数组": "class=\"public-list-box public-pic-b&&class=\"public-list-subtitle cor5 hide ft2\"","图片": "https+://dabaisha.tv/upload/+data-src=\"/upload/&&\"","倒序": "0","标题": "title=\"&&\"","副标题": "public-list-prb hide ft2\">&&</span>","链接": "href=\"&&\"","播放数组": "class=\"anthology-list-play&&</ul>","播放列表": "<li&&</li>","播放标题": "\">&&</a","播放链接": "href=\"&&\"","线路数组": "<h2&&</h2>","线路标题": ">&&<[只包含:播放记录][替换:播放记录>>大白鲨]","搜索模式": "1","搜索url": "https://dabaisha.tv/search?page={pg}&wd={wd}","搜索数组": "class=\"left public-list-bj&&class=\"thumb-else cor5 hide\"","搜索标题": "class=\"thumb-txt cor4 hide\">*>&&</div>"}},
 {"key": "爱瓜TV","name": "🥇｜愛瓜｜藍光◎秒播(無廣告)","type": 4,"api": "http://zhangqun66.com/aigua.php","searchable": 1,"style": {"type": "rect", "ratio": 1.33},"changeable": 1},
 {"key": "csp_Wwys","name": "🥇｜农民｜高清◎秒播(無廣告)","type": 3,"quickSearch": 1,"api": "csp_XYQHiker","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xiaosa-1107.jar?ref_type=heads","ext": "https://gitlab.com/st7833232/recha/-/raw/main/json/农民影视.json"},
+{"key": "csp_歐樂影院ORG","name": "🥇｜歐吉｜高清◎秒播(無廣告)","type": 3,"api": "csp_XBPQ","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xyqxbpq.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": {"简介": "content_desc context clearfix\">&&</span>","分类url": "https://www.oulevod.org/index.php/vod/show/area/{area}/by/{by}/id/{cateId}/page/{catePg}/year/{year}.html","分类": "電視劇$2#電影$1#動漫$4#綜藝$3#短劇$53","地区": "大陆&香港&台湾&美国&法国&英国&日本&韩国&德国&泰国&印度&意大利&西班牙&加拿大&其他"}},
 {"key":"红豆","name":"🍊红豆┃多线","type":3,"api":"csp_AppSxGuard","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"rfOX1voDIQhH8epBwpmIsuS/sSCZ0NTh0TYsL4PsF1wEM1kc4mV87b9fc/FN//x7jUuaRvFX81tz8A=="},
 {"key":"下饭","name":"🍙下饭┃多线","type":3,"api":"csp_AppSxGuard","searchable":1,"quickSearch":1,"filterable":1,"ext":"rfOX1voDIQhH8epBwpmIsuStuSyZxtH332ksdImjS1xHcE9fpWVy8fNjc+8DhNI67j3SJZRGjnM="},
-{"key":"兄弟","name":"🍊水星┃多线","type":3,"api":"csp_AppSxGuard","timeout":15,"searchable":1,"quickSearch":1,"filterable":1,"ext":"rfOb1uAWbkRHp7hdxprG9un3+SLP183q3ik3cJDiAwlFdF8L6SIvrvc9LrpTyIg76T7QJZdEkWNj43wiSaA0TJyQpu2IF2jsSLWFx7WkAmG40hFxJ1tI+Jf+EVG8DtoDRcNi+TtVGULnWrSz3EWnVcxR3EJhXnrwYWe1kJtNW5txuHAO"},
-{"key":"热播","name":"📺热播┃多线","type":3,"api":"csp_AppTTGuard","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1,"ext":"uqGL1bNENExT7/hGxpSE5qU="},
 {"key":"厂长","name":"📔厂长┃不卡","type":3,"api":"csp_NewCzGuard","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"海纳TV","name":"影視| 海纳","type":3,"api":"csp_XBPQ","jar":"./jar/xyqxbpq.jar","searchable":1,"quickSearch":1,"filterable":1,"ext":"./json/海纳TV.json"},
 {"key":"溢彩","name":"💡溢彩┃秒播","type":3,"api":"csp_AppSxGuard","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"rfOb1uAWbkRHp7hdxprG9un3+TfN183v1zIyaYDoDAIaLw5L8Dp8+v88LrEL3dBzrmWbdMBX0WNm7HtkQuw0AIzUurGBVyPqCKzDmbriATuukhctJlsLo8KxCw=="},
@@ -542,6 +541,7 @@
 {"name":"ipv6","type":0,"url":"https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/tvboxtv.txt","ua":"okhttp/3.8.1","timeout":20,"epg":"https://epg.112114.eu.org/?ch={name}&date={date}&serverTimeZone=Asia/Hong_Kong","logo":"https://epg.112114.eu.org/logo/{name}.png"}
 ]
 }
+
 
 
 
