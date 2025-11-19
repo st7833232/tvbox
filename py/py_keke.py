@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
-# @Author  : Doubebly
-# @Time    : 2025/3/20 20:21
-
+# @Author  : Doubebly (fixed)
+# @Time    : 2025/11/19  (fixed)
 
 import sys
-import requests
-from bs4 import BeautifulSoup
-from lxml import etree
 import re
-sys.path.append('..')
-from base.spider import Spider
+import time
+import requests
+from lxml import etree
+from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
-class Spider(Spider):
+sys.path.append('..')
+from base.spider import Spider as BaseSpider  # avoid name clash
+
+class Spider(BaseSpider):
     def getName(self):
         return "可可影视"
 
@@ -19,31 +21,70 @@ class Spider(Spider):
         self.home_url = 'https://www.keke7.app'
         self.headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
-            "Referer": "https://www.keke7.app/",
+            "Referer": self.home_url + "/",
         }
-        self.image_domain = "https://vres.cfaqcgj.com"  # 圖片域名
-
+        self.image_domain = "https://vres.cfaqcgj.com"  # 圖片域名（若圖片為相對路徑則組合）
         self.default_play_url = 'https://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/mp4/xgplayer-demo-720p.mp4'
+        # optional: timeout (ms) for playwright navigation
+        self.playwright_timeout = 60000
 
     def getDependence(self):
         return []
 
     def isVideoFormat(self, url):
-        pass
+        # 可自行擴充判斷影片格式
+        return url.endswith(('.mp4', '.m3u8', '.flv', '.ts'))
 
     def manualVideoCheck(self):
-        pass
+        return False
 
+    # ---- helper: 使用 Playwright 取得渲染後的 HTML ----
+    def _fetch_html_with_playwright(self, url, wait_selector=None):
+        """
+        使用 Playwright 抓取渲染後 HTML，若 wait_selector 提供則會等待該 selector 出現（最多 self.playwright_timeout ms）
+        返回 str html（或 '' 若發生錯誤）
+        """
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
+                context = browser.new_context(user_agent=self.headers["User-Agent"])
+                page = context.new_page()
+                page.goto(url, timeout=self.playwright_timeout)
+                if wait_selector:
+                    try:
+                        page.wait_for_selector(wait_selector, timeout=self.playwright_timeout)
+                    except PlaywrightTimeoutError:
+                        # not fatal — 可能頁面沒有該 selector
+                        pass
+                html = page.content()
+                browser.close()
+                return html
+        except Exception as e:
+            print(f"_fetch_html_with_playwright error: {e}")
+            return ''
+
+    # ---- 取得 token 的備援方法（先用 requests 嘗試，再用 playwright） ----
     def getTimeToken(self):
-        res = requests.get(self.home_url)
-        soup = BeautifulSoup(res.content, 'html.parser')
-        div_list = soup.find_all('input')
-        for each in div_list:
-            if ('t' == each.get('name')):
-                return re.sub(r'==$', '%3D%3D', each.get('value'))
+        try:
+            res = requests.get(self.home_url, headers=self.headers, timeout=15)
+            soup = BeautifulSoup(res.content, 'html.parser')
+            t_input = soup.find('input', attrs={'name': 't'})
+            if t_input and t_input.get('value'):
+                return re.sub(r'==$', '%3D%3D', t_input.get('value'))
+        except Exception:
+            pass
+
+        # fallback: 用 playwright 渲染取得
+        html = self._fetch_html_with_playwright(self.home_url)
+        if html:
+            soup = BeautifulSoup(html, 'html.parser')
+            t_input = soup.find('input', attrs={'name': 't'})
+            if t_input and t_input.get('value'):
+                return re.sub(r'==$', '%3D%3D', t_input.get('value'))
         return ''
 
-    def homeContent(self, filter):
+    # ---- homeContent (靜態分類資訊) ----
+        def homeContent(self, filter):
         result = {
             'class': [
                 {'type_id': '1', 'type_name': '电影'},
@@ -328,141 +369,214 @@ class Spider(Spider):
         print(f"Debug homeContent: {result}")
         return result
 
+    # ---- homeVideoContent: 使用 Playwright 抓取首頁的動態內容 ----
     def homeVideoContent(self):
         d = []
         try:
-            res = requests.get(self.home_url, headers=self.headers)
-            res.encoding = 'utf-8'
-            root = etree.HTML(res.text)
-            data_list = root.xpath('//div[@class="module-box-inner"]/div[@class="module-item"]/a[@class="v-item"]')
-            for i in data_list:
-                vod_remarks = i.xpath('.//div[@class="v-item-bottom"]/span/text()')
-                d.append(
-                    {
-                        'vod_id': i.xpath('./@href')[0],
-                        'vod_name': i.xpath('.//div[@class="v-item-title"]/text()')[1],
-                        'vod_pic': self.image_domain + i.xpath('.//img/@data-original')[1],
-                        'vod_remarks': vod_remarks[0].strip() if len(vod_remarks) > 0 else '',
-                    }
-                )
-            return {'list': d, 'parse': 0, 'jx': 0}
-        except Exception as e:
-            print(e)
-            return {'list': d, 'parse': 0, 'jx': 0}
+            html = self._fetch_html_with_playwright(self.home_url, wait_selector="div.module-item a.v-item")
+            if not html:
+                return {"list": d, "parse": 0, "jx": 0}
 
+            root = etree.HTML(html)
+            items = root.xpath('//div[contains(@class,"module-item")]//a[contains(@class,"v-item")]')
+            for i in items:
+                # href 可能是完整或相對路徑
+                hrefs = i.xpath('./@href')
+                vod_id = hrefs[0] if hrefs else ''
+                title_list = i.xpath('.//div[contains(@class,"v-item-title")]/text()')
+                # 允許圖片在 src 或 data-original
+                pic = i.xpath('.//img/@data-original') or i.xpath('.//img/@src') or ['']
+                remarks = ''.join(i.xpath('.//div[contains(@class,"v-item-bottom")]//span/text()')).strip()
+                vod_name = title_list[0].strip() if title_list else ''
+                vod_pic = pic[0].strip() if pic and pic[0] else ''
+                if vod_pic and not vod_pic.startswith('http'):
+                    vod_pic = self.image_domain.rstrip('/') + '/' + vod_pic.lstrip('/')
+
+                if not vod_id and vod_name == '':
+                    continue
+
+                d.append({
+                    "vod_id": vod_id,
+                    "vod_name": vod_name,
+                    "vod_pic": vod_pic,
+                    "vod_remarks": remarks
+                })
+            return {"list": d, "parse": 0, "jx": 0}
+        except Exception as e:
+            print("爬蟲錯誤 homeVideoContent：", e)
+            return {"list": [], "parse": 0, "jx": 0}
+
+    # ---- categoryContent: 分類頁也用 Playwright（因為是動態） ----
     def categoryContent(self, cid, page, filter, ext):
-        # 剧情
         _class = ext.get('class', '')
-        # 地区
         _area = ext.get('area', '')
-        # 语言
         _language = ext.get('lang', '')
-        # 年份
         _year = ext.get('year', '')
-        # 排序
         _by = ext.get('by', '')
 
         url = self.home_url + f'/show/{cid}-{_class}-{_area}-{_language}-{_year}-{_by}-{page}.html'
         d = []
         try:
-            res = requests.get(url, headers=self.headers)
-            res.encoding = 'utf-8'
-            root = etree.HTML(res.text)
-            data_list = root.xpath('//div[@class="module-box-inner"]/div[@class="module-item"]/a[@class="v-item"]')
+            html = self._fetch_html_with_playwright(url, wait_selector='div.module-item a.v-item')
+            if not html:
+                return {'list': d, 'parse': 0, 'jx': 0}
+
+            root = etree.HTML(html)
+            data_list = root.xpath('//div[contains(@class,"module-box-inner")]//div[contains(@class,"module-item")]//a[contains(@class,"v-item")]')
             for i in data_list:
-                vod_remarks = i.xpath('.//div[@class="v-item-bottom"]/span/text()')
-                d.append(
-                    {
-                        'vod_id': i.xpath('./@href')[0],
-                        'vod_name': i.xpath('.//div[@class="v-item-title"]/text()')[1],
-                        'vod_pic': self.image_domain + i.xpath('.//img/@data-original')[1],
-                        'vod_remarks': vod_remarks[0].strip() if len(vod_remarks) > 0 else '',
-                    }
-                )
+                vod_id = (i.xpath('./@href') or [''])[0]
+                vod_name_list = i.xpath('.//div[contains(@class,"v-item-title")]/text()')
+                vod_name = vod_name_list[0].strip() if vod_name_list else ''
+                pic_list = i.xpath('.//img/@data-original') or i.xpath('.//img/@src') or ['']
+                vod_pic = pic_list[0].strip() if pic_list and pic_list[0] else ''
+                if vod_pic and not vod_pic.startswith('http'):
+                    vod_pic = self.image_domain.rstrip('/') + '/' + vod_pic.lstrip('/')
+                vod_remarks = ''.join(i.xpath('.//div[contains(@class,"v-item-bottom")]//span/text()')).strip()
+                d.append({
+                    'vod_id': vod_id,
+                    'vod_name': vod_name,
+                    'vod_pic': vod_pic,
+                    'vod_remarks': vod_remarks
+                })
             return {'list': d, 'parse': 0, 'jx': 0}
         except Exception as e:
-            print(e)
+            print("categoryContent error:", e)
             return {'list': d, 'parse': 0, 'jx': 0}
 
+    # ---- detailContent: 影片詳情與播放清單 ----
     def detailContent(self, did):
-        ids = did[0]
+        # did 可能是 ['/path/xxx.html'] 或類似
+        ids = did[0] if isinstance(did, (list, tuple)) and len(did) > 0 else did
         video_list = []
-        url = self.home_url + ids
+        if not ids:
+            return {'list': [], 'parse': 0, 'jx': 0}
+
+        url = self.home_url + ids if ids.startswith('/') else self.home_url + '/' + ids
         try:
-            res = requests.get(url, headers=self.headers)
-            root = etree.HTML(res.text.encode('utf-8'))
-            vod_play_from_list = root.xpath('//span[@class="source-item-label"]/text()')
-            vod_play_from = '$$$'.join(vod_play_from_list)
-            play_list = root.xpath('//div[@class="episode-list"]')
+            html = self._fetch_html_with_playwright(url, wait_selector='div.episode-list')
+            if not html:
+                # fallback 使用 requests（若伺服器回傳靜態有用）
+                res = requests.get(url, headers=self.headers, timeout=15)
+                html = res.text
+
+            root = etree.HTML(html)
+            vod_play_from_list = root.xpath('//span[contains(@class,"source-item-label")]/text()')
+            vod_play_from = '$$$'.join([x.strip() for x in vod_play_from_list if x.strip()])
+
+            play_list_nodes = root.xpath('//div[contains(@class,"episode-list")]')
             vod_play_url_list = []
-            for i in play_list:
-                name_list = i.xpath('./a/text()')
-                url_list = i.xpath('./a/@href')
-                vod_play_url_list.append(
-                    '#'.join([_name + '$' + _url for _name, _url in zip(name_list, url_list)])
-                )
+            for node in play_list_nodes:
+                name_list = [n.strip() for n in node.xpath('./a/text()') if n.strip()]
+                url_list = [u.strip() for u in node.xpath('./a/@href') if u.strip()]
+                pairs = []
+                for _n, _u in zip(name_list, url_list):
+                    pairs.append(_n + '$' + _u)
+                if pairs:
+                    vod_play_url_list.append('#'.join(pairs))
+
             vod_play_url = '$$$'.join(vod_play_url_list)
+            # 其它 metadata（盡量從 page 抓）
+            vod_name = (root.xpath('//h1/text()') or [''])[0].strip()
+            vod_content = ''.join(root.xpath('//div[contains(@class,"video-desc")]//text()')).strip() or ''
+            vod_actor = ''.join(root.xpath('//div[contains(@class,"actor")]//text()')).strip() or ''
+            vod_director = ''.join(root.xpath('//div[contains(@class,"director")]//text()')).strip() or ''
 
             video_list.append({
                 'type_name': '',
                 'vod_id': ids,
-                'vod_name': '',
+                'vod_name': vod_name,
                 'vod_remarks': '',
                 'vod_year': '',
                 'vod_area': '',
-                'vod_actor': '',
-                'vod_director': '',
-                'vod_content': '',
+                'vod_actor': vod_actor,
+                'vod_director': vod_director,
+                'vod_content': vod_content,
                 'vod_play_from': vod_play_from,
                 'vod_play_url': vod_play_url
             })
             return {"list": video_list, 'parse': 0, 'jx': 0}
-
         except Exception as e:
             print(f"Error in detailContent: {e}")
             return {'list': [], 'msg': str(e)}
 
+    # ---- searchContent: 使用 token 並以 Playwright 抓取（若需要） ----
     def searchContent(self, key, quick, page='1'):
         token = self.getTimeToken()
-        url = f'{self.home_url}/search?k={key}&t={token}'
+        url = f'{self.home_url}/search?k={key}'
+        if token:
+            url = f'{self.home_url}/search?k={key}&t={token}'
         d = []
         try:
-            res = requests.get(url, headers=self.headers)
-            res.encoding = 'utf-8'
-            root = etree.HTML(res.text)
-            data_list = root.xpath('//a[@class="search-result-item"]')
+            # 試用 requests 先抓（較輕量），若回傳沒有結果再用 playwright
+            res = requests.get(url, headers=self.headers, timeout=15)
+            html = res.text if res.status_code == 200 else ''
+            root = etree.HTML(html) if html else None
+            data_list = root.xpath('//a[contains(@class,"search-result-item")]') if root is not None else []
+
+            if not data_list:
+                # fallback: playwright
+                html = self._fetch_html_with_playwright(url, wait_selector='a.search-result-item')
+                if not html:
+                    return {'list': d, 'parse': 0, 'jx': 0}
+                root = etree.HTML(html)
+                data_list = root.xpath('//a[contains(@class,"search-result-item")]')
+
             for i in data_list:
-                d.append(
-                    {
-                        'vod_id': i.xpath('./@href')[0],
-                        'vod_name': i.xpath('.//div[@class="title"]/text()')[0],
-                        'vod_pic': self.image_domain + i.xpath('.//img/@data-original')[0],
-                        'vod_remarks': i.xpath('.//div[@class="tags"]/span[1]/text()')[0]
-                    }
-                )
+                vod_id = (i.xpath('./@href') or [''])[0]
+                vod_name = (i.xpath('.//div[contains(@class,"title")]/text()') or [''])[0].strip()
+                pic = (i.xpath('.//img/@data-original') or i.xpath('.//img/@src') or [''])[0]
+                if pic and not pic.startswith('http'):
+                    pic = self.image_domain.rstrip('/') + '/' + pic.lstrip('/')
+                vod_remarks = (i.xpath('.//div[contains(@class,"tags")]/span[1]/text()') or [''])[0].strip()
+                d.append({
+                    'vod_id': vod_id,
+                    'vod_name': vod_name,
+                    'vod_pic': pic,
+                    'vod_remarks': vod_remarks
+                })
             result = {'list': d, 'parse': 0, 'jx': 0}
             return result
         except Exception as e:
             print(f"Error in searchContent: {e}")
             return {'list': [], 'parse': 0, 'jx': 0}
 
+    # ---- playerContent: 取得播放真實 URL 或回傳嗅探鏈接 ----
     def playerContent(self, flag, pid, vipFlags):
-        url = self.home_url + pid
+        # pid 可能為相對路徑或播放頁面
+        url = self.home_url + pid if pid.startswith('/') else (pid if pid.startswith('http') else self.home_url + '/' + pid)
         try:
-            res = requests.get(url, headers=self.headers)
-            res.encoding = 'utf-8'
-            play_url_list = re.findall(r'src: "(.*?)",', res.text)
+            # 使用 requests 先嘗試解析蘊含的 src 字串
+            res = requests.get(url, headers=self.headers, timeout=15)
+            text = res.text or ''
+            # 嘗試直接找 JS 中的 src: "...",
+            play_url_list = re.findall(r'src[:=]\s*"(https?://[^"]+)"', text)
             if not play_url_list:
-                # 获取失败 就返回链接嗅探
-                return {'url': url, 'parse': 1, 'jx': 0}
-            play_url = play_url_list[0]
-            return {'url': play_url, 'parse': 0, 'jx': 0, 'header': {"User-Agent": "okhttp/5.0.0",}}
+                # 用 playwright 渲染後再找
+                html = self._fetch_html_with_playwright(url, wait_selector='video, iframe, source')
+                if html:
+                    play_url_list = re.findall(r'src[:=]\s*"(https?://[^"]+)"', html)
+                # 另外嘗試 iframe 或 video 標籤
+                if not play_url_list and html:
+                    root = etree.HTML(html)
+                    # video source
+                    src = (root.xpath('//video/source/@src') or root.xpath('//video/@src') or root.xpath('//iframe/@src') or []) 
+                    if src:
+                        play_url_list = src
+
+            if play_url_list:
+                play_url = play_url_list[0]
+                # 若是 .m3u8 或 mp4，直接回傳，並包含必要 header（部份播放器需要）
+                header = {"User-Agent": "okhttp/5.0.0"}
+                return {'url': play_url, 'parse': 0, 'jx': 0, 'header': header}
+            # 若都沒抓到，回傳嗅探連結給上層處理
+            return {'url': url, 'parse': 1, 'jx': 0}
         except Exception as e:
             print(f"Error in playerContent: {e}")
             return {'url': self.default_play_url, 'parse': 0, 'jx': 0}
 
     def localProxy(self, params):
-        pass
+        # 如需實作本地轉 proxy，可在此擴充
+        return None
 
     def destroy(self):
         return '正在Destroy'
