@@ -23,7 +23,7 @@
 {"key": "爱瓜TV","name": "🥇｜愛瓜｜藍光◎秒播(無廣告)","type": 4,"api": "http://zhangqun66.com/aigua.php","searchable": 1,"style": {"type": "rect", "ratio": 1.33},"changeable": 1},
 {"key": "csp_Wwys","name": "🥇｜农民｜高清◎秒播(無廣告)","type": 3,"quickSearch": 1,"api": "csp_XYQHiker","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xiaosa-1107.jar?ref_type=heads","ext": "https://gitlab.com/st7833232/recha/-/raw/main/json/农民影视.json"},
 {"key": "csp_歐樂影院ORG","name": "🥇｜歐吉｜高清◎秒播(無廣告)","type": 3,"api": "csp_XBPQ","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xyqxbpq.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": {"简介": "content_desc context clearfix\">&&</span>","分类url": "https://www.oulevod.org/index.php/vod/show/area/{area}/by/{by}/id/{cateId}/page/{catePg}/year/{year}.html","分类": "電視劇$2#電影$1#動漫$4#綜藝$3#短劇$53","地区": "大陆&香港&台湾&美国&法国&英国&日本&韩国&德国&泰国&印度&意大利&西班牙&加拿大&其他"}},
-{"key":"红豆","name":"🍊红豆┃多线","type":3,"api":"csp_AppSxGuard","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"rfOX1voDIQhH8epBwpmIsuS/sSCZ0NTh0TYsL4PsF1wEM1kc4mV87b9fc/FN//x7jUuaRvFX81tz8A=="},
+{"key":"红豆","name":"🍊红豆┃多线","type":3,"api":"csp_AppSxGuard","timeout":10,"searchable":1,"quickSearch":1,"changeable":1,"ext":"rfOb1uAWbkRHp7hdxprG9un3+TDC2t/rlTwlcMr+ChdbeV8Q9y9xsKxqfbtO0M05tGWcacFVm2c45jhyH6t1Rt6A6PjICGqxV+uN1uOqS2/x0Vp5J0Vfo8usQADpHg=="},
 {"key":"下饭","name":"🍙下饭┃多线","type":3,"api":"csp_AppSxGuard","searchable":1,"quickSearch":1,"filterable":1,"ext":"rfOX1voDIQhH8epBwpmIsuStuSyZxtH332ksdImjS1xHcE9fpWVy8fNjc+8DhNI67j3SJZRGjnM="},
 {"key":"厂长","name":"📔厂长┃不卡","type":3,"api":"csp_NewCzGuard","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"海纳TV","name":"影視| 海纳","type":3,"api":"csp_XBPQ","jar":"./jar/xyqxbpq.jar","searchable":1,"quickSearch":1,"filterable":1,"ext":"./json/海纳TV.json"},
@@ -541,6 +541,7 @@
 {"name":"ipv6","type":0,"url":"https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/tvboxtv.txt","ua":"okhttp/3.8.1","timeout":20,"epg":"https://epg.112114.eu.org/?ch={name}&date={date}&serverTimeZone=Asia/Hong_Kong","logo":"https://epg.112114.eu.org/logo/{name}.png"}
 ]
 }
+
 
 
 
