@@ -23,6 +23,7 @@
 {"key": "独播","name": "🏆｜獨播｜藍光◎秒播(無廣告)","type": 3,"jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/7哥.jar","api": "csp_DubkAmns","searchable": 1,"filterable": 1,"quickSearch": 1,"changeable": 1,"ext": "https://gitlab.com/st7833232/recha/-/raw/main/json/獨播庫.json"},
 {"key": "py_zjuys.py","name": "🏆｜金牌系列-zjuys","type": 3,"api": "https://gitlab.com/st7833232/recha/-/raw/main/py/金牌.py","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": {"site": "https://zjuys.com/"}},
 {"name": "🎯荐片","key": "薦片","type": 3,"api": "csp_JPianAmns","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/aowu.jar","searchable": 1,"filterable": 1,"quickSearch": 1,"changeable": 1,"ext": "https://raw.githubusercontent.com/st7833232/tvbox/refs/heads/own/json/jianpian.json"},
+{"key": "🌱春天","name": "🏆｜春天","type": 3,"api": "csp_NewGrAmns","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/aowu.jar","searchable": 1,"filterable": 1,"quickSearch": 1,"changeable": 1,"ext": "PnUH1ANGAUTUF9HVgAAHARACF0cRFwdCx0TGwlcBggZSlhIVlFtBFZDAQ0dC1VMR1BUV1ZEVEofVktQCRFQPSQKQjwgBjMpJz4MOyBQCxdmfAs0KhU+Ow48CzMgKjULMlQBKl1VNSlAIEpUS1JHDgJKTkhWUnQZSnscNj0oRkcVIA8EBzIxH0djY08OE15EUAgTQxQGF0VOSFYJEgFGBwJQMQsqEjM/MgIkITYeQwFMQHYaQ1hBByEXBVRLUkcGBBgrARARCFIRVRMMEwwZExBQSUdWCxwJGl1XHmxSHQAXR01WRRYCOAcYRFlWHxJQV1QEDREAKB8DUF9HVlFHW01XBkFSCRdTE1JORgRQSUdWGBULH1JVF2xfEwkXR01WRREKCloNGAkaVhwDWlAcBxcLEAIGXAkPFw1WRFQRQQtAbgIIExERGRUfR11USkZKWBMQAUpCAAEeABYFAlBfR1ZZRUpYExAEVkMBDR0LVUxHUFFXRFhESgk="},
 {"key": "py_愛瓜app.py","name": "🏆｜愛瓜｜高清◎秒播(無廣告+嗷嗚版)","type": 3,"api": "https://gitlab.com/st7833232/recha/-/raw/main/py/爱瓜TVAPP.py","searchable": 1,"quickSearch": 1,"filterable": 0,"changeable": 1},
 {"key": "py_aiguatv","name": "🏆｜愛瓜｜高清◎秒播(無廣告+沐辰版)","type": 3,"api": "https://gitlab.com/st7833232/recha/-/raw/main/py/py_aigua.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 1},
 {"key": "csp_Wwys","name": "🥇｜农民｜高清◎秒播(無廣告)","type": 3,"quickSearch": 1,"api": "csp_XYQHiker","jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/xiaosa-1216.jar?ref_type=heads","ext": "https://gitlab.com/st7833232/recha/-/raw/main/json/农民影视.json"},
@@ -545,6 +546,7 @@
 {"name":"ipv6","type":0,"url":"https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/tvboxtv.txt","ua":"okhttp/3.8.1","timeout":20,"epg":"https://epg.112114.eu.org/?ch={name}&date={date}&serverTimeZone=Asia/Hong_Kong","logo":"https://epg.112114.eu.org/logo/{name}.png"}
 ]
 }
+
 
 
 
