@@ -40,7 +40,7 @@
       "searchable": 0,
       "changeable": 0,
       "indexs"    : 1,
-      "ext"       : "./lib/tokenm.json$$$./lib/douban.json"
+      "ext"       : "https://gitlab.com/st7833232/recha/-/raw/main/lib/tokenm.json$$$https://gitlab.com/st7833232/recha/-/raw/main/lib/douban.json"
     },
         {
             "key": "YGP",
@@ -55,7 +55,7 @@
       "key"       : "聚合短剧",
       "name"      : "📺｜聚合短劇",
       "type"      : 3,
-      "api"       : "./drpy_js/聚合短剧.js",
+      "api"       : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/聚合短剧.js",
       "jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/river-0506.jar;md5;49bf68569c72be249d87ebc287e690d3",
       "changeable": 1
     },
@@ -67,7 +67,7 @@
       "api"       : "csp_Config",
       "searchable": 1,
       "changeable": 0,
-      "ext"       : "./json/tokenm.json",
+      "ext"       : "https://gitlab.com/st7833232/recha/-/raw/main/json/tokenm.json",
       "style"     : {"type": "rect", "ratio": 1.5}
     },
     {
@@ -117,7 +117,7 @@
             "key": "py_jieyingshi",
             "name": "🏆｜金牌｜無廣",
             "type": 3,
-            "api": "./lib/jys.py",
+            "api": "https://gitlab.com/st7833232/recha/-/raw/main/lib/jys.py",
             "searchable": 1,
             "quickSearch": 0,
             "filterable": 0,
@@ -144,7 +144,7 @@
       "key"        : "py_愛瓜app.py",
       "name"       : "🏆｜銅牌｜高清(無廣告)",
       "type"       : 3,
-      "api"        : "./py/爱瓜TVAPP.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/爱瓜TVAPP.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 0,
@@ -154,7 +154,7 @@
       "key"       : "py_aidianying",
       "name"      : "🏆｜鐵牌｜藍光(無廣告)",
       "type"      : 3,
-      "api"       : "./py/aidianying.py",
+      "api"       : "https://gitlab.com/st7833232/recha/-/raw/main/py/aidianying.py",
       "searchable": 1,
       "filterable": 0,
       "changeable": 0
@@ -163,7 +163,7 @@
       "key"       : "異界",
       "name"      : "🏆｜異界｜高清(無廣告)",
       "type"      : 3,
-      "api"       : "./py/界.py",
+      "api"       : "https://gitlab.com/st7833232/recha/-/raw/main/py/界.py",
       "searchable": 1,
       "filterable": 0,
       "changeable": 0
@@ -485,7 +485,7 @@
       "filterable" : 1,
       "quickSearch": 1,
       "changeable" : 1,
-      "ext"        : "./json/獨播庫.json"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/json/獨播庫.json"
     },
 
     {
@@ -541,7 +541,7 @@
       "key"        : "py_mv4r4",
       "name"       : "🏆｜有兮｜高清",
       "type"       : 3,
-      "api"        : "./py/1.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/1.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 0
@@ -554,8 +554,8 @@
       "searchable" : 1,
       "quickSearch": 1,
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "api"        : "./drpy_libs/drpy2.min.js",
-      "ext"        : "./drpy_js/360影视[官].js"
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main//drpy_libs/drpy2.min.js",
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main//drpy_js/360影视[官].js"
     },
     {
       "key"        : "hipy_js_奇珍异兽[官]",
@@ -564,14 +564,14 @@
       "searchable" : 1,
       "quickSearch": 1,
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "api"        : "./drpy_libs/drpy2.min.js",
-      "ext"        : "./drpy_js/奇珍异兽[官].js"
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/奇珍异兽[官].js"
     },
     {
       "key"        : "py_芒",
       "name"       : "🥭｜芒果｜官源",
       "type"       : 3,
-      "api"        : "./py/py_芒.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/py_芒.py",
       "searchable" : 1,
       "quickSearch": 0,
       "filterable" : 0,
@@ -583,9 +583,9 @@
       "type"       : 3,
       "searchable" : 1,
       "quickSearch": 1,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "ext"        : "./drpy_js/百忙无果[官].js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/百忙无果[官].js"
     },
     {
       "key"        : "drpy_js_腾云驾雾",
@@ -593,17 +593,17 @@
       "type"       : 3,
       "searchable" : 1,
       "quickSearch": 1,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "ext"        : "./drpy_js/腾云驾雾[官].js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/腾云驾雾[官].js"
     },
     {
       "key" : "tt",
       "name": "🐧｜騰訊｜官源(道長)",
       "type": 3,
-      "api" : "./drpy_libs/drpy2.min.js",
+      "api" : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar" : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "ext" : "./drpy_js/腾云4k.js"
+      "ext" : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/腾云4k.js"
     },
     {
       "key"        : "drpy_js_菜狗",
@@ -611,9 +611,9 @@
       "type"       : 3,
       "searchable" : 1,
       "quickSearch": 1,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "ext"        : "./drpy_js/菜狗[官].js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/菜狗[官].js"
     },
     {
       "key"        : "drpy_js_优酷",
@@ -621,9 +621,9 @@
       "type"       : 3,
       "searchable" : 1,
       "quickSearch": 1,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "ext"        : "./drpy_js/优酷[官].js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/优酷[官].js"
     },
     {
       "key"        : "bilimd",
@@ -652,7 +652,7 @@
       "style"      : {"type": "rect", "ratio": 1.433},
       "ext"        : {
         "cookie": "http://127.0.0.1:9978/file/tvbox/bili_cookie.txt",
-        "json"  : "./json/哔哩合集.json"
+        "json"  : "https://gitlab.com/st7833232/recha/-/raw/main/json/哔哩合集.json"
       },
       "timeout"    : 20
     },
@@ -673,7 +673,7 @@
       "key"  : "喜马拉雅",
       "name" : "🎖︎｜喜馬拉雅｜有聲書",
       "type" : 3,
-      "api"  : "./py/喜马拉雅.py",
+      "api"  : "https://gitlab.com/st7833232/recha/-/raw/main/py/喜马拉雅.py",
       "style": {"type": "rect", "ratio": 1.333},
       "ext"  : ""
     },
@@ -681,13 +681,13 @@
       "key" : "喜马拉雅2",
       "name": "🎖︎｜喜馬拉雅2｜有聲書",
       "type": 3,
-      "api" : "./py/ximalaya.py"
+      "api" : "https://gitlab.com/st7833232/recha/-/raw/main/py/ximalaya.py"
     },
     {
       "key"        : "py_愛電影.py",
       "name"       : "🏆｜金牌系列-愛電影",
       "type"       : 3,
-      "api"        : "./py/又是一個金牌.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/又是一個金牌.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -704,7 +704,7 @@
       "key"        : "py_文才",
       "name"       : "🏆｜金牌系列-文才",
       "type"       : 3,
-      "api"        : "./py/又是一個金牌.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/又是一個金牌.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -716,7 +716,7 @@
       "key"        : "py_zjuys.py",
       "name"       : "🏆｜金牌系列-zjuys",
       "type"       : 3,
-      "api"        : "./py/又是一個金牌.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/又是一個金牌.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -726,7 +726,7 @@
       "key"        : "py_又是一個金牌",
       "name"       : "🏆｜金牌系列-jpyy",
       "type"       : 3,
-      "api"        : "./py/又是一個金牌.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/又是一個金牌.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -738,7 +738,7 @@
       "key"        : "py_xiong_di_ying_shi",
       "name"       : "🏆｜兄弟",
       "type"       : 3,
-      "api"        : "./py/兄弟影视.min.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/兄弟影视.min.py",
       "searchable" : 1,
       "quickSearch": 0,
       "filterable" : 0,
@@ -785,7 +785,7 @@
       "quickSearch": 1,
       "api"        : "csp_XYQHiker",
       "jar": "https://gitlab.com/st7833232/recha/-/raw/main/jar/river-0506.jar;md5;49bf68569c72be249d87ebc287e690d3",
-      "ext"        : "./json/农民影视.json"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/json/农民影视.json"
     },
     {
       "key"        : "csp_If101",
@@ -885,7 +885,7 @@
       "key"        : "py_缘梦_APP",
       "name"       : "📱｜緣夢｜高清(無廣告+PY)",
       "type"       : 3,
-      "api"        : "./py/app/getapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/getapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -900,7 +900,7 @@
       "key"        : "py_哇哇APP",
       "name"       : "📱｜哇哇｜高清(無廣告+py)",
       "type"       : 3,
-      "api"        : "./py/哇哇APP.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/哇哇APP.py",
       "searchable" : 1,
       "quickSearch": 0,
       "filterable" : 0,
@@ -910,7 +910,7 @@
       "key"        : "py_爱影_APP",
       "name"       : "📱｜爱影",
       "type"       : 3,
-      "api"        : "./py/app/qijiapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/qijiapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -925,7 +925,7 @@
       "key"        : "py_数字_APP",
       "name"       : "📱｜数字",
       "type"       : 3,
-      "api"        : "./py/app/getapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/getapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -940,7 +940,7 @@
       "key"        : "py_八天_APP",
       "name"       : "📱｜八天",
       "type"       : 3,
-      "api"        : "./py/app/getapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/getapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -955,7 +955,7 @@
       "key"        : "py_feifanziyuan",
       "name"       : "❌｜非凡｜藍光(有廣告)",
       "type"       : 3,
-      "api"        : "./py/py_feifanziyuan.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/py_feifanziyuan.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1
@@ -1032,7 +1032,7 @@
       "jar"       : "https://gitlab.com/st7833232/recha/-/raw/main/jar/xmky.jar",
       "searchable": 1,
       "ext"       : {
-        "json": "./json/bili听书.json",
+        "json": "https://gitlab.com/st7833232/recha/-/raw/main/json/bili听书.json",
         "cookie": "SESSDATA=819d93e8%2C1764426658%2C4ec10%2A61CjA74Z7n0isRlTABldomYIMAwyRBPDvLaJl9ERae-vTzTalKiYoDX6Qu9J0E5fof-h0SVlJfUUE0T1RLaExUQWloSUNBNG9ROEZQazBJX3FDX0VkWUFZQ0t2LXFtbnJmdUI1eEkwUnVJVl96Nk1sZTBDeFYtTkxVUjc5MjZsVjFWSENjR0hnZUVBIIEC;bili_jct=b655010f87e4dcb20ea46a191d23a443;DedeUserID=3546382984022310;DedeUserID__ckMd5=9728526c8c2ad2a5;sid=51az4mji"
       },
       "style"     : {"type": "rect", "ratio": 1.333}
@@ -1045,7 +1045,7 @@
       "jar"       : "https://gitlab.com/st7833232/recha/-/raw/main/jar/xmky.jar",
       "searchable": 1,
       "ext"       : {
-        "json": "./json/bili漫画.json",
+        "json": "https://gitlab.com/st7833232/recha/-/raw/main/json/bili漫画.json",
         "cookie": "SESSDATA=819d93e8%2C1764426658%2C4ec10%2A61CjA74Z7n0isRlTABldomYIMAwyRBPDvLaJl9ERae-vTzTalKiYoDX6Qu9J0E5fof-h0SVlJfUUE0T1RLaExUQWloSUNBNG9ROEZQazBJX3FDX0VkWUFZQ0t2LXFtbnJmdUI1eEkwUnVJVl96Nk1sZTBDeFYtTkxVUjc5MjZsVjFWSENjR0hnZUVBIIEC;bili_jct=b655010f87e4dcb20ea46a191d23a443;DedeUserID=3546382984022310;DedeUserID__ckMd5=9728526c8c2ad2a5;sid=51az4mji"
       },
       "style"     : {"type": "rect", "ratio": 1.333}
@@ -1058,7 +1058,7 @@
       "jar"       : "https://gitlab.com/st7833232/recha/-/raw/main/jar/xmky.jar",
       "searchable": 1,
       "ext"       : {
-        "json": "./json/bili歌曲.json",
+        "json": "https://gitlab.com/st7833232/recha/-/raw/main/json/bili歌曲.json",
         "cookie": "SESSDATA=819d93e8%2C1764426658%2C4ec10%2A61CjA74Z7n0isRlTABldomYIMAwyRBPDvLaJl9ERae-vTzTalKiYoDX6Qu9J0E5fof-h0SVlJfUUE0T1RLaExUQWloSUNBNG9ROEZQazBJX3FDX0VkWUFZQ0t2LXFtbnJmdUI1eEkwUnVJVl96Nk1sZTBDeFYtTkxVUjc5MjZsVjFWSENjR0hnZUVBIIEC;bili_jct=b655010f87e4dcb20ea46a191d23a443;DedeUserID=3546382984022310;DedeUserID__ckMd5=9728526c8c2ad2a5;sid=51az4mji"
       },
       "style"     : {"type": "rect", "ratio": 1.333}
@@ -1067,7 +1067,7 @@
       "key"       : "py_bi星河影视ili",
       "name"      : "🎖︎｜bili看電影",
       "type"      : 3,
-      "api"       : "./py/哔哩.py",
+      "api"       : "https://gitlab.com/st7833232/recha/-/raw/main/py/哔哩.py",
       "searchable": 1,
       "filterable": 0,
       "changeable": 0
@@ -1521,7 +1521,7 @@
       "key"        : "py_椰子_APP",
       "name"       : "🎡｜椰子",
       "type"       : 3,
-      "api"        : "./py/app/appfox.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/appfox.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -1531,7 +1531,7 @@
       "key"        : "py_丫丫_APP",
       "name"       : "🎡｜丫丫",
       "type"       : 3,
-      "api"        : "./py/app/getapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/getapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -1546,7 +1546,7 @@
       "key"        : "py_漫屋_APP",
       "name"       : "🎡｜漫屋",
       "type"       : 3,
-      "api"        : "./py/app/getapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/getapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -1561,7 +1561,7 @@
       "key"        : "py_方舟_APP",
       "name"       : "🎡｜方舟",
       "type"       : 3,
-      "api"        : "./py/app/getapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/getapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -1576,7 +1576,7 @@
       "key"        : "py_元咲_APP",
       "name"       : "🎡｜元纓",
       "type"       : 3,
-      "api"        : "./py/app/getapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/getapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -1591,7 +1591,7 @@
       "key"        : "py_番薯_APP",
       "name"       : "🎡｜番薯",
       "type"       : 3,
-      "api"        : "./py/app/getapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/getapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -1606,7 +1606,7 @@
       "key"        : "py_曼波_APP",
       "name"       : "🎡｜曼波",
       "type"       : 3,
-      "api"        : "./py/app/getapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/getapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -1621,7 +1621,7 @@
       "key"        : "py_咕咕_APP",
       "name"       : "🎡｜咕咕",
       "type"       : 3,
-      "api"        : "./py/app/getapp.py",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/py/app/getapp.py",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
@@ -1641,7 +1641,7 @@
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
-      "ext"        : "./json/動漫巴士.json"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/json/動漫巴士.json"
     },
     {
       "key" : "巴士动漫",
@@ -1649,7 +1649,7 @@
       "type": 3,
       "api" : "csp_XYQHiker",
       "jar" : "https://gitlab.com/st7833232/recha/-/raw/main/jar/xyqxbpq.jar;md5;fd3cefc7302f3a39a442682f802b11e5",
-      "ext" : "./json/巴士动漫.json"
+      "ext" : "https://gitlab.com/st7833232/recha/-/raw/main/json/巴士动漫.json"
     },
     {
       "key"        : "csp_天天動漫",
@@ -1738,13 +1738,13 @@
       "key"        : "hipy_js_NT动漫[漫]",
       "name"       : "🎡｜牛顿动漫",
       "type"       : 3,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
       "order_num"  : 0,
-      "ext"        : "./drpy_js/NT动漫[漫].js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/NT动漫[漫].js"
     },
     {
       "key"        : "drpy_js_去看吧",
@@ -1753,9 +1753,9 @@
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "ext"        : "./drpy_js/去看吧.js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/去看吧.js"
     },
     {
       "key"        : "好看动漫",
@@ -1764,9 +1764,9 @@
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "ext"        : "./drpy_js/HKDM.js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/HKDM.js"
     },
     {
       "key"        : "drpy_js_爱弹幕",
@@ -1775,9 +1775,9 @@
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "ext"        : "./drpy_js/爱弹幕.js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/爱弹幕.js"
     },
     {
       "key"        : "hipy_js_七色番[漫]",
@@ -1786,30 +1786,30 @@
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
-      "ext"        : "./drpy_js/七色番[漫].js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/七色番[漫].js"
     },
     {
       "key"        : "hipy_js_爱弹幕[漫]",
       "name"       : "🎡｜爱动漫",
       "type"       : 3,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
       "searchable" : 1,
       "quickSearch": 1,
       "filterable" : 1,
-      "ext"        : "./drpy_js/爱弹幕[漫].js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/爱弹幕[漫].js"
     },
     {
       "key"        : "异世界",
       "name"       : "🎡｜异世界动漫",
       "type"       : 3,
-      "api"        : "./drpy_libs/drpy2.min.js",
+      "api"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_libs/drpy2.min.js",
       "jar"        : "https://gitlab.com/st7833232/recha/-/raw/main/jar/fm.jar",
       "searchable" : 1,
       "quickSearch": 1,
-      "ext"        : "./drpy_js/异世界.js"
+      "ext"        : "https://gitlab.com/st7833232/recha/-/raw/main/drpy_js/异世界.js"
     },
     {
       "key"        : "KuGou",
